@@ -1,46 +1,54 @@
----  
-
-```markdown
 # Project_WiDS2023
 
 ## Abstract
-This project addresses the WiDS 2023 Challenge through the development of **fair and accurate machine learning models**.  
-The work includes **exploratory data analysis (EDA)**, **data preprocessing**, **feature engineering**, **model selection**, and **performance evaluation**.  
-The goal is to achieve reliable predictions while providing transparency into the modeling process.
+This project addresses the **WiDS 2023 Challenge** by developing and evaluating machine learning models for predictive analytics.  
+The pipeline includes **exploratory data analysis (EDA)**, **data preprocessing**, **feature engineering**, and **hyperparameter optimization using Optuna**.  
+Among all tested algorithms, **XGBoost** achieved the best performance, evaluated using **Root Mean Square Error (RMSE)** as the primary metric.
+
+---
 
 ## Methodology
-1. **Data Preprocessing**  
-   - Handling missing values  
-   - Encoding categorical features  
-   - Normalization / standardization  
 
-2. **Feature Engineering**  
-   - Creation of new variables from existing ones  
-   - Selection of relevant features  
+### 1. Data Preprocessing
+- Handled missing values through imputation strategies.  
+- Encoded categorical variables using suitable encoding techniques.  
+- Normalized numerical variables where appropriate.  
 
-3. **Modeling**  
-   - Implemented and compared multiple algorithms:  
-     - Logistic Regression  
-     - Random Forest  
-     - XGBoost / LightGBM  
-   - Hyperparameter tuning via GridSearchCV  
+### 2. Feature Engineering
+- Constructed additional variables to capture hidden patterns.  
+- Selected the most relevant features to reduce redundancy.  
 
-4. **Evaluation Metrics**  
-   - Accuracy  
-   - Precision, Recall, F1-score  
-   - ROC-AUC Curve  
-   - Confusion Matrix  
+### 3. Model Development
+- Several models were initially explored for benchmarking (e.g., Random Forest, LightGBM and catBoost).  
+
+- **XGBoost was chosen as the main model** due to its superior performance.  
+- Hyperparameter tuning was conducted using **Optuna**, leveraging Bayesian optimization techniques to minimize RMSE.  
+
+### 4. Evaluation
+- The **Root Mean Square Error (RMSE)** was used as the primary evaluation metric, as it directly reflects prediction error magnitudes.  
+- Cross-validation was applied to ensure robustness and reduce overfitting.  
+
+---
 
 ## Results
-- The best-performing model achieved **[X]% accuracy** and **[Y] ROC-AUC**.  
-- Feature importance analysis revealed that **[Top Features]** were most influential.  
+- **Best Performing Model:** XGBoost  
+- **Optimization Framework:** Optuna (automated hyperparameter search)  
+- **Evaluation Metric:** RMSE  
+- Comparative model (catBoost, Random Forest, LightGBM) yielded higher RMSE and were therefore not selected.  
+
+---
 
 ## Reproducibility
-- All experiments are stored in `notebooks/`.  
-- Source code is modularized in `src/`.  
-- Models and predictions are saved in `outputs/`.  
+- All experiments are documented in Jupyter Notebooks under `notebooks/`.  
+- Core functionalities for preprocessing, optimization, and evaluation are modularized in `src/`.  
+- Trained models and prediction outputs are saved in `outputs/`.  
+
+---
 
 ## Future Work
-- Apply deep learning approaches (e.g., Neural Networks).  
-- Conduct fairness-aware evaluation (bias detection).  
-- Deploy the final model via a web interface.
+- Explore advanced ensemble techniques to complement XGBoost.  
+- Investigate deep learning approaches (e.g., Neural Networks) for comparison.  
+- Apply fairness-aware analysis to detect and mitigate potential biases.  
+- Deploy the optimized XGBoost model in a production environment for real-world use cases.  
+
+--- 
