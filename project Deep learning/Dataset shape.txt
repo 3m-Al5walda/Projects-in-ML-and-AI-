@@ -3,9 +3,8 @@
 Abrasions : 164 
 Bruises : 242 
 Burns : 407 
-Cut : 100 
-Diabetic Wounds : 511 
-Laseration : 122 
+Cut : 100 + 122
+Diabetic Wounds : 511 
 Normal : 200 
 Pressure Wounds : 617 
 Surgical Wounds : 420 
