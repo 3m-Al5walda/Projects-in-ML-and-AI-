@@ -13,10 +13,11 @@ The system allows users to input data through a web page and receive predictions
 
 ## 📂 Project Structure
 project Deep learning/
- │
- ├── model.ipynb 
- ├── app.py 
- └── project deep learning.php
+ 
+│
+├── model.ipynb 
+├── app.py 
+└── project deep learning.php
 
 
 ---
